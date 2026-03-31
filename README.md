@@ -126,19 +126,4 @@ Models are evaluated on:
 - **PR-AUC** (Average Precision) — preferred for imbalanced datasets, reflects precision-recall trade-off at all thresholds
 - **Brier Score** — for the LSTM model (probabilistic calibration)
 
----
 
-## Notes
-
-- The dataset is **imbalanced** (~13.5% positive class). All models include explicit strategies to handle this (class weighting or `scale_pos_weight`).
-- The LSTM uses zero-padding with a `Masking` layer to handle variable-length episodes.
-- GCS sub-scores and the composite total are both retained as features.
-
----
-
-## References
-
-- Johnson, A. et al. (2016). MIMIC-III, a freely accessible critical care database. *Scientific Data*.
-- Harutyunyan, H. et al. (2019). Multitask learning and benchmarking with clinical time series data. *Scientific Data*. [mimic3-benchmarks](https://github.com/YerevaNN/mimic3-benchmarks)
-# mimic3_analysis
-Analysis of Health Care Data from MIMIC 3 dataset
